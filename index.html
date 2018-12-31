@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lucky Sevens</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        #luckySevensGame {
+            width: 400px;
+            margin: auto;
+        }
+    </style>
+
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+</head>
+
+<body>
+    <article id="luckySevensGame" class="container">
+        <header>
+            <h1>Lucky Sevens</h1>
+        </header>
+
+        <section>
+            <form name="luckySevensForm" onsubmit="return play();">
+                <div class="form-group ">
+                    <h4>Starting Bet:</h4>
+                    <input type="number" class="form-control" name="startingBet" placeholder="$0.00" autofocus>
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary">Play</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="luckySevensResult" style="display:none;">
+            <h3 style="text-align: center;">Results</h3>
+
+            <table class="table table-bordered">
+                <tr>
+                    <th>Starting Bet</th>
+                    <td>
+                        $<span id="startingBet"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Totals Rolls Before Going Broke</th>
+                    <td>
+                        <span id="numberOfRolls"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Highest Amount Won</th>
+                    <td>
+                        $<span id="highestHeld"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Roll Count at Highest Amount Won</th>
+                    <td>
+                        <span id="highestRolls"></span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </article>
+
+</body>
+
+</html>
